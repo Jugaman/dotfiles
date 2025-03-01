@@ -197,5 +197,19 @@ config.inactive_pane_hsb = {
 	saturation = 0.4,
 	brightness = 0.5,
 }
+
+-- Setting Bitwarden SSH Agent
+
+-- Override default SSH_AUTH_SOCK with Bitwarden's SSH agent
+local SSH_AUTH_SOCK = os.getenv("SSH_AUTH_SOCK")
+local bw_ssh_agent_sock = string.format("%s/.bitwarden/ssh-agent.sock", wezterm.home_dir)
+
+if SSH_AUTH_SOCK == bw_ssh_agent_sock then
+	-- Check if the Bitwarden SSH agent socket exists
+	if #wezterm.glob(bw_ssh_agent_sock) == 1 then
+		config.default_ssh_auth_sock = bw_ssh_agent_sock
+	end
+end
+
 -- and finally, return the configuration to wezterm
 return config
