@@ -7,24 +7,37 @@ local config = {}
 if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
--- This is where you actually apply your config choices
 
+-- This is where you actually apply your config choices
+-- Fonts
 config.font = wezterm.font_with_fallback({
 	{ family = "GeistMono Nerd Font" },
 	{ family = "SpaceMono Nerd Font" },
-	{ family = "Noto Color Emoji" },
+	{
+		family = "Noto Color Emoji",
+		assume_emoji_presentation = true,
+	},
 })
-config.window_decorations = "RESIZE"
-config.prefer_egl = true
-config.use_fancy_tab_bar = false
-config.hide_tab_bar_if_only_one_tab = true
-config.enable_wayland = false
 config.font_size = 10
-config.enable_scroll_bar = false
-config.scrollback_lines = 3000
-config.default_cursor_style = "BlinkingBlock"
+config.dpi = 96
+config.bold_brightens_ansi_colors = true
+-- cursor
+config.default_cursor_style = "BlinkingBar"
 config.cursor_blink_ease_in = "Constant"
 config.cursor_blink_ease_out = "Constant"
+config.animation_fps = 1
+-- graphical performance
+config.front_end = "WebGpu"
+config.webgpu_power_preference = "LowPower"
+config.enable_wayland = false
+config.prefer_egl = true
+--
+config.window_decorations = "RESIZE"
+config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = true
+config.enable_scroll_bar = false
+config.scrollback_lines = 10000
+
 config.window_close_confirmation = "AlwaysPrompt"
 
 config.colors = {
@@ -96,7 +109,7 @@ config.colors = {
 
 	quick_select_label_bg = { Color = "peru" },
 	quick_select_label_fg = { Color = "#ffffff" },
-	quick_select_match_bg = { AnsiColor = "Navy" },
+	quick_select_match_bg = { AnsiColor = "White" },
 	quick_select_match_fg = { Color = "#ffffff" },
 }
 
