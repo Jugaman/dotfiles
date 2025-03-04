@@ -1,0 +1,1 @@
+wezterm/config/startup.lua

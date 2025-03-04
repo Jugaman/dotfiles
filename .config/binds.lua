@@ -1,0 +1,1 @@
+wezterm/config/binds.lua
