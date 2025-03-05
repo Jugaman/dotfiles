@@ -1,21 +1,34 @@
-local M = {}
+local wezterm = require("wezterm")
 
-function M:init()
-	self.options = {}
-	return self
+---@class Config
+---@field options table
+local Config = {}
+
+---Initialize Config
+---@return Config
+function Config:init()
+  local o = {}
+  self = setmetatable(o, { __index = Config })
+  self.options = {}
+  return o
 end
 
-function M:append(module)
-	-- 🛠 Debug: Print module to check if it's `nil`
-	if not module then
-		error("Config:append() received a nil module! Check your require statements.")
-	end
-
-	-- Merge the module into `options`
-	for k, v in pairs(module) do
-		self.options[k] = v
-	end
-	return self
+---Append to `Config.options`
+---@param new_options table new options to append
+---@return Config
+function Config:append(new_options)
+  for k, v in pairs(new_options) do
+    if self.options[k] ~= nil then
+      wezterm.log_warn(
+        'Duplicate config option detected: ',
+        { old = self.options[k], new = new_options[k] }
+      )
+      goto continue
+    end
+    self.options[k] = v
+    ::continue::
+  end
+  return self
 end
 
-return M
+return Config
