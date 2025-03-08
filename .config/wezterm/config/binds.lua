@@ -3,7 +3,10 @@ local wezterm = require("wezterm")
 return {
 	disable_default_key_bindings = true,
 	keys = {
-		--Splits
+
+		-- ╔═╗┌─┐┬  ┬┌┬┐
+		-- ╚═╗├─┘│  │ │
+		-- ╚═╝┴  ┴─┘┴ ┴
 		{
 			key = "Minus",
 			mods = "CTRL|SHIFT",
@@ -20,7 +23,10 @@ return {
 				size = { Percent = 50 },
 			}),
 		},
-		--Resize Pane
+
+		-- ╦═╗┌─┐┌─┐┬┌─┐┌─┐  ╔═╗┌─┐┌┐┌┌─┐
+		-- ╠╦╝├┤ └─┐│┌─┘├┤   ╠═╝├─┤│││├┤
+		-- ╩╚═└─┘└─┘┴└─┘└─┘  ╩  ┴ ┴┘└┘└─┘
 		{
 			key = "H",
 			mods = "CTRL|ALT",
@@ -41,13 +47,19 @@ return {
 			mods = "CTRL|ALT",
 			action = wezterm.action.AdjustPaneSize({ "Right", 3 }),
 		},
-		-- Close Pane
+
+		-- ╔═╗┬  ┌─┐┌─┐┌─┐  ╔═╗┌─┐┌┐┌┌─┐
+		-- ║  │  │ │└─┐├┤   ╠═╝├─┤│││├┤
+		-- ╚═╝┴─┘└─┘└─┘└─┘  ╩  ┴ ┴┘└┘└─┘
 		{
 			key = "D",
 			mods = "CTRL|SHIFT",
 			action = wezterm.action.CloseCurrentPane({ confirm = true }),
 		},
-		-- Pane Navigation (CTRL + ALT + Arrow Keys)
+
+		-- ╔═╗┌─┐┌┐┌┌─┐  ╔╗╔┌─┐┬  ┬┬┌─┐┌─┐┌┬┐┬┌─┐┌┐┌
+		-- ╠═╝├─┤│││├┤   ║║║├─┤└┐┌┘││ ┬├─┤ │ ││ ││││
+		-- ╩  ┴ ┴┘└┘└─┘  ╝╚╝┴ ┴ └┘ ┴└─┘┴ ┴ ┴ ┴└─┘┘└┘
 		{
 			key = "h",
 			mods = "CTRL|SHIFT",

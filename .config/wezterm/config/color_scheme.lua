@@ -1,5 +1,7 @@
 return {
+
 	colors = {
+
 		-- The default text color
 		foreground = "#E3E6F2",
 		-- The default background color
@@ -20,7 +22,7 @@ return {
 		selection_bg = "#fffacd",
 
 		-- The color of the split lines between panes
-		split = "#CCE0AC",
+		split = "#7d8f61",
 
 		ansi = {
 			"black",
