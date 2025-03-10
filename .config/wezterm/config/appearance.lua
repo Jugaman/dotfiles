@@ -13,7 +13,7 @@ return {
 			assume_emoji_presentation = true,
 		},
 	}),
-	font_size = 10,
+	font_size = 13,
 	dpi = 96,
 	bold_brightens_ansi_colors = true,
 
