@@ -28,22 +28,22 @@ return {
 		-- ╠╦╝├┤ └─┐│┌─┘├┤   ╠═╝├─┤│││├┤
 		-- ╩╚═└─┘└─┘┴└─┘└─┘  ╩  ┴ ┴┘└┘└─┘
 		{
-			key = "H",
+			key = "h",
 			mods = "CTRL|ALT",
 			action = wezterm.action.AdjustPaneSize({ "Left", 3 }),
 		},
 		{
-			key = "J",
+			key = "j",
 			mods = "CTRL|ALT",
 			action = wezterm.action.AdjustPaneSize({ "Down", 3 }),
 		},
 		{
-			key = "K",
+			key = "k",
 			mods = "CTRL|ALT",
 			action = wezterm.action.AdjustPaneSize({ "Up", 3 }),
 		},
 		{
-			key = "L",
+			key = "l",
 			mods = "CTRL|ALT",
 			action = wezterm.action.AdjustPaneSize({ "Right", 3 }),
 		},
