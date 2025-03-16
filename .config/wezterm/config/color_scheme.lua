@@ -25,28 +25,28 @@ return {
 		split = "#7d8f61",
 
 		ansi = {
-			"black",
-			"maroon",
-			"green",
-			"olive",
-			"navy",
-			"purple",
-			"teal",
-			"silver",
+			"#0C0C0C", -- black (vampire_black)
+			"#982B1C", -- red (deep_dumpling)
+			"#176843", -- green (iguana_green,)
+			"#F9CB43", -- yellow (key_lime)
+			"#094374", -- blue (ceil)
+			"#311131", -- magenta (cyber_grape,)
+			"#259797", -- cyan (java)
+			"#E4E4E3", -- white (smokey_white)
 		},
+
 		brights = {
-			"grey",
-			"red",
-			"lime",
-			"yellow",
-			"blue",
-			"fuchsia",
-			"aqua",
-			"white",
+			"#272121", -- bright black (raisin_black)
+			"#D84040", -- bright red (jasper)
+			"#7EED6F", -- bright green (pastel_green)
+			"#E9F28E", -- bright yellow (maize)
+			"#117AE0", -- bright blue (bright_navy_blue)
+			"#8967B3", -- bright magenta (wisteria)
+			"#64CCDA", -- bright cyan (sky_blue)
+			"#F5F5F5", -- bright white (platinum)
 		},
 
 		-- Arbitrary colors of the palette in the range from 16 to 255
-		indexed = { [136] = "#af8700" },
 
 		-- Since: 20220319-142410-0fcdea07
 		-- When the IME, a dead key or a leader key are being processed and are effectively

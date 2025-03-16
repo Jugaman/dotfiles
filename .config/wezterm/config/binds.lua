@@ -96,4 +96,8 @@ return {
 			action = wezterm.action.PasteFrom("Clipboard"),
 		},
 	},
+
+	-- ╔╦╗┌─┐┌┐ ┌─┐
+	--  ║ ├─┤├┴┐└─┐
+	--  ╩ ┴ ┴└─┘└─┘
 }

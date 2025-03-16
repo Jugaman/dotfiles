@@ -1,6 +1,11 @@
 local wezterm = require("wezterm")
-
+local chromatic_palette = require("chromatic.chromatic-palette")
 return {
+
+	-- ╔═╗┌─┐┬  ┌─┐┬─┐┌─┐
+	-- ║  │ ││  │ │├┬┘└─┐
+	-- ╚═╝└─┘┴─┘└─┘┴└─└─┘
+	colors = chromatic_palette,
 
 	-- ╔═╗┌─┐┌┐┌┌┬┐┌─┐
 	-- ╠╣ │ ││││ │ └─┐
@@ -33,12 +38,17 @@ return {
 	enable_wayland = false,
 	prefer_egl = true,
 
+	-- ╔╦╗┌─┐┌┐   ╔╗ ┌─┐┬─┐
+	--  ║ ├─┤├┴┐  ╠╩╗├─┤├┬┘
+	--  ╩ ┴ ┴└─┘  ╚═╝┴ ┴┴└─
+	use_fancy_tab_bar = false,
+	hide_tab_bar_if_only_one_tab = true,
+	tab_bar_at_bottom = false,
+
 	-- ╔╦╗┌─┐┌─┐┌─┐┬─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
 	--  ║║├┤ │  │ │├┬┘├─┤ │ ││ ││││└─┐
 	-- ═╩╝└─┘└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘└─┘
 	window_decorations = "RESIZE",
-	use_fancy_tab_bar = false,
-	hide_tab_bar_if_only_one_tab = true,
 	enable_scroll_bar = false,
 	scrollback_lines = 10000,
 	window_close_confirmation = "AlwaysPrompt",

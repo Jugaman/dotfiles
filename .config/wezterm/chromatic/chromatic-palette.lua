@@ -7,8 +7,7 @@ local phantom_gloom = {
 	sonic_silver = "#7A7A7A",
 	pastel_green = "#7EED6F",
 	iguana_green = "#7ABA78",
-	camouflage_green = "#7D8F61",
-	dark_sea_green = "#9FC088",
+	dark_spring_green = "#7ABA78",
 	jasper = "#D84040",
 	deep_dumpling = "#982B1C",
 	tulip = "#F18196",
@@ -17,71 +16,70 @@ local phantom_gloom = {
 	maize = "#F9CB43",
 	key_lime = "#E9F28E",
 	navajo_white = "#FFE4A7",
-	lavender = "#E3E6F2",
-	cyber_grape = "#624E88",
+	dark_purple = "#311131",
 	wisteria = "#8967B3",
-	blue_violet = "#756AB6",
+	dark_cerulean = "#756AB6",
+	bright_navy_blue = "#117AE0",
+	java = "#259797",
 	sky_blue = "#64CCDA",
 	ceil = "#90AACB",
+	platinum = "#E4E4E3",
+	smokey_white = "#F5F5F5",
 }
 
-return chromatic_scheme({
+local chromatic_scheme = {
+
 	background = phantom_gloom.vampire_black,
-	foreground = phantom_gloom.lavender,
+	foreground = phantom_gloom.smokey_white,
 	cursor_bg = phantom_gloom.pastel_green,
 	cursor_fg = phantom_gloom.night_rider,
 	selection_bg = phantom_gloom.navajo_white,
 	selection_fg = phantom_gloom.night_rider,
-	split = phantom_gloom.camouflage_green,
+	split = phantom_gloom.dark_spring_green,
 
 	ansi = {
-		"#0C0C0C", -- black
-		"#C50F1F", -- red
-		"#13A10E", -- green
-		"#C19C00", -- yellow
-		"#0037DA", -- blue
-		"#881798", -- magenta/purple
-		"#3A96DD", -- cyan
-		"#CCCCCC", -- white
+		"#0C0C0C", -- black (vampire_black)
+		"#982B1C", -- red (deep_dumpling)
+		"#176843", -- green (iguana_green)
+		"#F9CB43", -- yellow (key_lime)
+		"#094374", -- blue (ceil)
+		"#311131", -- magenta (cyber_grape)
+		"#259797", -- cyan (java)
+		"#E4E4E3", -- white (smokey_white)
 	},
+
 	brights = {
-		"#767676", -- black
-		"#E74856", -- red
-		"#16C60C", -- green
-		"#F9F1A5", -- yellow
-		"#3B78FF", -- blue
-		"#B4009E", -- magenta/purple
-		"#61D6D6", -- cyan
-		"#F2F2F2", -- white
+		"#272121", -- bright black (raisin_black)
+		"#D84040", -- bright red (jasper)
+		"#7EED6F", -- bright green (pastel_green)
+		"#E9F28E", -- bright yellow (maize)
+		"#117AE0", -- bright blue (bright_navy_blue)
+		"#8967B3", -- bright magenta (wisteria)
+		"#64CCDA", -- bright cyan (sky_blue)
+		"#F5F5F5", -- bright white (platinum)
 	},
+
 	-- Since: 20220319-142410-0fcdea07
 	-- When the IME, a dead key or a leader key are being processed and are effectively
 	-- holding input pending the result of input composition, change the cursor
 	-- to this color to give a visual cue about the compose state.
-	compose_cursor = phantom_gloom.dark_salmon,
+	compose_cursor = phantom_gloom.tulip,
 
 	tab_bar = {
-		background = "#000000",
+		background = phantom_gloom.vampire_black,
+
 		active_tab = {
-			bg_color = mocha.surface2,
-			fg_color = mocha.text,
+			bg_color = phantom_gloom.vampire_black,
+			fg_color = phantom_gloom.pastel_green,
+			intensity = "Normal",
+			italic = false,
 		},
 		inactive_tab = {
-			bg_color = mocha.surface0,
-			fg_color = mocha.subtext1,
-		},
-		inactive_tab_hover = {
-			bg_color = mocha.surface0,
-			fg_color = mocha.text,
-		},
-		new_tab = {
-			bg_color = mocha.base,
-			fg_color = mocha.text,
-		},
-		new_tab_hover = {
-			bg_color = mocha.mantle,
-			fg_color = mocha.text,
+			bg_color = phantom_gloom.vampire_black,
+			fg_color = phantom_gloom.sonic_silver,
 			italic = true,
 		},
 	},
-})
+}
+
+return chromatic_scheme
