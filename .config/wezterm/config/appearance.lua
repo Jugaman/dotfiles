@@ -61,7 +61,7 @@ return {
 	},
 
 	inactive_pane_hsb = {
-		saturation = 0.4,
-		brightness = 0.5,
+		saturation = 0.6,
+		brightness = 0.8,
 	},
 }
