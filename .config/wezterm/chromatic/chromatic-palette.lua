@@ -1,73 +1,83 @@
 local phantom_gloom = {
-
 	vampire_black = "#08090E",
 	night_rider = "#0C0C0C",
 	raisin_black = "#272121",
 	outer_space = "#444444",
-	sonic_silver = "#7A7A7A",
-	pastel_green = "#7EED6F",
-	iguana_green = "#7ABA78",
+	platinum = "#E4E4E3",
+	smokey_white = "#F5F5F5",
 	islamic_green = "#059212",
-	jasper = "#D84040",
+	pastel_green = "#7EED6F",
+	greenish_turquoise = "#00FF9C",
 	ruby_red = "#FF1E1E",
+	jasper = "#D84040",
 	tulip = "#F18196",
 	dark_orange = "#FF8F00",
 	dark_salmon = "#F19A81",
-	smoked_latte = "#C9AF94",
 	maize = "#F9CB43",
+	corn = "#FAEF5D",
 	key_lime = "#E9F28E",
 	dark_orchid = "#A31ACB",
+	phlox = "#E900FF",
 	wisteria = "#8967B3",
 	egyptian_blue = "#1230AE",
 	brandeis_blue = "#117AE0",
 	java = "#259797",
-	sky_blue = "#64CCDA",
-	aquamarine = "#6FEDD6",
-	platinum = "#E4E4E3",
-	smokey_white = "#F5F5F5",
+	light_aqua = "#94FFD8",
+	pale_cyan = "#B6FFFA",
 }
 
 local chromatic_scheme = {
-
 	background = phantom_gloom.vampire_black,
 	foreground = phantom_gloom.smokey_white,
+
+	-- ╔═╗┬ ┬┬─┐┌─┐┌─┐┬─┐
+	-- ║  │ │├┬┘└─┐│ │├┬┘
+	-- ╚═╝└─┘┴└─└─┘└─┘┴└─
 	cursor_bg = phantom_gloom.pastel_green,
 	cursor_fg = phantom_gloom.night_rider,
-	selection_bg = phantom_gloom.key_lime,
+	compose_cursor = phantom_gloom.tulip,
+
+	-- ╔═╗┌─┐┬  ┌─┐┌─┐┌┬┐┬┌─┐┌┐┌
+	-- ╚═╗├┤ │  ├┤ │   │ ││ ││││
+	-- ╚═╝└─┘┴─┘└─┘└─┘ ┴ ┴└─┘┘└┘
+	selection_bg = phantom_gloom.dark_salmon,
 	selection_fg = phantom_gloom.night_rider,
+
+	-- ╔═╗┌─┐┌┐┌┌─┐┌─┐
+	-- ╠═╝├─┤│││├┤ └─┐
+	-- ╩  ┴ ┴┘└┘└─┘└─┘
 	split = phantom_gloom.pastel_green,
 
+	-- ╔═╗╔╗╔╔═╗╦  ╔═╗┌─┐┬  ┌─┐┬─┐┌─┐
+	-- ╠═╣║║║╚═╗║  ║  │ ││  │ │├┬┘└─┐
+	-- ╩ ╩╝╚╝╚═╝╩  ╚═╝└─┘┴─┘└─┘┴└─└─┘
 	ansi = {
 		"#0C0C0C", -- black (vampire_black)
 		"#D84040", -- red (jasper)
 		"#059212", -- green (islamic_green)
-		"#F9CB43", -- yellow (key_lime)
+		"#F9CB43", -- yellow (maize)
 		"#1230AE", -- blue (egyptian_blue)
 		"#8967B3", -- magenta (wisteria)
-		"#64CCDA", -- cyan (sky_blue)
+		"#259797", -- cyan (java)
 		"#E4E4E3", -- white (smokey_white)
 	},
 
 	brights = {
 		"#272121", -- bright black (raisin_black)
 		"#FF1E1E", -- bright red (ruby_red)
-		"#7EED6F", -- bright green (pastel_green)
-		"#E9F28E", -- bright yellow (maize)
+		"#00FF9C", -- bright green (greenish_turquoise)
+		"#FAEF5D", -- bright yellow (corn)
 		"#117AE0", -- bright blue (brandeis_blue)
-		"#A31ACB", -- bright magenta (dark_orchid)
-		"#6FEDD6", -- bright cyan (aquamarine)
+		"#E900FF", -- bright magenta (phlox)
+		"#B6FFFA", -- bright cyan (pale_cyan)
 		"#F5F5F5", -- bright white (platinum)
 	},
 
-	-- Since: 20220319-142410-0fcdea07
-	-- When the IME, a dead key or a leader key are being processed and are effectively
-	-- holding input pending the result of input composition, change the cursor
-	-- to this color to give a visual cue about the compose state.
-	compose_cursor = phantom_gloom.tulip,
-
+	-- ╔╦╗┌─┐┌┐   ╔╗ ┌─┐┬─┐
+	--  ║ ├─┤├┴┐  ╠╩╗├─┤├┬┘
+	--  ╩ ┴ ┴└─┘  ╚═╝┴ ┴┴└─
 	tab_bar = {
 		background = phantom_gloom.vampire_black,
-
 		active_tab = {
 			bg_color = phantom_gloom.vampire_black,
 			fg_color = phantom_gloom.pastel_green,
@@ -76,8 +86,21 @@ local chromatic_scheme = {
 		},
 		inactive_tab = {
 			bg_color = phantom_gloom.vampire_black,
-			fg_color = phantom_gloom.sonic_silver,
+			fg_color = phantom_gloom.outer_space,
 			italic = true,
+		},
+		inactive_tab_hover = {
+			bg_color = phantom_gloom.pastel_green,
+			fg_color = phantom_gloom.vampire_black,
+			italic = true,
+		},
+		new_tab = {
+			bg_color = phantom_gloom.vampire_black,
+			fg_color = phantom_gloom.pastel_green,
+		},
+		new_tab_hover = {
+			bg_color = phantom_gloom.pastel_green,
+			fg_color = phantom_gloom.vampire_black,
 		},
 	},
 }
