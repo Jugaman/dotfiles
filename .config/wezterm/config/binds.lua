@@ -11,7 +11,7 @@ return {
 		-- Split Pane
 		{
 			key = "Minus",
-			mods = "CTRL|SHIFT",
+			mods = "CTRL",
 			action = action.SplitPane({
 				direction = "Down",
 				size = { Percent = 50 },
@@ -50,8 +50,8 @@ return {
 
 		-- Close Pane
 		{
-			key = "Q",
-			mods = "CTRL|SHIFT",
+			key = "q",
+			mods = "CTRL",
 			action = action.CloseCurrentPane({ confirm = true }),
 		},
 
