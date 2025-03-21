@@ -25,11 +25,11 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = 400
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
-    height = (0, 300)
+    height = (0, 400)
     # constant height of 300
     # height = 300
     # NOTE: Dunst from version 1.11 and older don't support dynamic height
@@ -66,7 +66,7 @@
     progress_bar_min_width = 150
 
     # Set the maximum width for the progress bar
-    progress_bar_max_width = 300
+    progress_bar_max_width = 400
 
     # Corner radius for the progress bar. 0 disables rounded corners.
     progress_bar_corner_radius = 0
@@ -144,7 +144,7 @@
 
     ### Text ###
 
-    font = Bai Jamjuree 10
+    font = Bai Jamjuree 13
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -334,14 +334,14 @@
     # dunst will attempt to calculate an appropriate dpi value for each monitor
     # using the resolution and physical size. This might be useful in setups
     # where there are multiple screens with very different dpi values.
-    per_monitor_dpi = false
+    per_monitor_dpi = true
 
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#08090E"
-    foreground = "#E3E6F2"
+    foreground = "#F5F5F5"
     frame_color = "#7EED6F"
     highlight = "#CCE0AC"
     timeout = 2
@@ -350,7 +350,7 @@
 
 [urgency_normal]
     background = "#08090E"
-    foreground = "#E3E6F2"
+    foreground = "#F5F5F5"
     frame_color = "#E9F28E"
     timeout = 20
     override_pause_level = 30
@@ -359,8 +359,8 @@
 
 [urgency_critical]
     background = "#08090E"
-    foreground = "#982B1C"
-    frame_color = "#982B1C"
+    foreground = "#D84040"
+    frame_color = "#FF1E1E"
     timeout = 20
     override_pause_level = 60
     # Icon for notifications with critical urgency
