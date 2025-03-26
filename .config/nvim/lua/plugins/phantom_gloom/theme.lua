@@ -39,14 +39,16 @@ return function(colors)
     FoldColumn = { bg = colors.vampire_black, fg = colors.outer_space },
     -- highlight for incremental search
     IncSearch = { bg = colors.deep_saffron, fg = colors.night_rider, bold = true },
-    -- Default line numbers
-    LineNr = { fg = colors.outer_space },
+    -- Default line numbers above
+    LineNrAbove = { fg = colors.outer_space },
+    -- Default line numbers below
+    LineNrBelow = { fg = colors.outer_space },
     -- Matching parentheses
     MatchParen = { bg = colors.dark_orchid, fg = colors.smokey_white, bold = true },
     -- Default text color and background
-    Normal = { fg = colors.platinum, bg = colors.vampire_black },
+    Normal = { bg = colors.vampire_black, fg = colors.platinum },
     -- Background for non-active windows
-    NormalNC = { fg = colors.platinum, bg = colors.vampire_black },
+    NormalNC = { bg = colors.vampire_black, fg = colors.platinum },
     -- Popup menu (completion menu)
     Pmenu = { bg = colors.raisin_black, fg = colors.platinum },
     -- Scrollbar background in popup menu
@@ -60,11 +62,11 @@ return function(colors)
     -- Left column for signs (Git/LSP)
     SignColumn = { bg = colors.vampire_black, fg = colors.outer_space },
     -- Active statusline
-    StatusLine = { fg = colors.smokey_white, bg = colors.raisin_black, bold = true },
+    StatusLine = { bg = colors.raisin_black, fg = colors.smokey_white, bold = true },
     -- Inactive statusline
     StatusLineNC = { bg = colors.raisin_black, fg = colors.outer_space },
     -- Tab bar (inactive)
-    TabLine = { fg = colors.platinum, bg = colors.raisin_black },
+    TabLine = { bg = colors.raisin_black, fg = colors.platinum },
     -- Empty space in tab bar
     TabLineFill = { bg = colors.vampire_black },
     -- Selected tab
@@ -90,13 +92,13 @@ return function(colors)
     -- Any Constant
     Constant = { fg = colors.corn },
     -- String constant
-    String = { fg = colors.key_lime },
+    String = { fg = colors.key_lime, italic = true },
     -- Character constants
     Character = { fg = colors.maize },
     -- Number Constant
     Number = { fg = colors.phlox },
     -- Boolean Constant
-    Boolean = { fg = colors.tulip },
+    Boolean = { fg = colors.tulip, italic = true },
     -- Float Constant
     Float = { fg = colors.phlox },
 
@@ -106,19 +108,19 @@ return function(colors)
     Function = { fg = colors.islamic_green, bold = true },
 
     -- Any Statement
-    Statement = { fg = colors.celeste },
+    Statement = { fg = colors.ice_cold },
     -- Conditional Statement (if, switch, then, else, endif, etc.)
-    Conditional = { fg = colors.celeste },
+    Conditional = { fg = colors.ice_cold },
     -- Loops (for, do, while, etc.)
-    Repeat = { fg = colors.celeste },
+    Repeat = { fg = colors.ice_cold },
     -- Case labels (case, default, etc.)
-    Label = { fg = colors.celeste },
+    Label = { fg = colors.ice_cold },
     -- Operators ("sizeof", "+", "*", etc.)
     Operator = { fg = colors.folly },
     -- Any other Keyword
     Keyword = { fg = colors.dark_orange, bold = true },
     -- Exception Handling (try, catch ,throw)
-    Exception = { fg = colors.corn, bold = true },
+    Exception = { fg = colors.ice_cold, bold = true },
 
     -- Generic Preprocessor
     PreProc = { fg = colors.deep_saffron },
@@ -127,7 +129,7 @@ return function(colors)
     -- Preprocessor #define
     Define = { fg = colors.deep_saffron },
     -- same as Define
-    Macro = { fg = colors.deep_saffron },
+    Macro = { fg = colors.folly },
     -- Preprocessor #if, #else, #endif, etc.
     PreCondit = { fg = colors.deep_saffron },
 
@@ -141,13 +143,13 @@ return function(colors)
     Typedef = { fg = colors.folly },
 
     -- Any special Symbol
-    Special = { fg = colors.light_aqua },
+    Special = { fg = colors.ice_cold },
     -- Special character in a constant
     SpecialChar = { fg = colors.folly },
     -- You can use CTRL-] on this
     Tag = { fg = colors.greenish_turquoise },
     -- Character that needs attention
-    Delimiter = { fg = colors.pastel_green },
+    Delimiter = { fg = colors.jasper },
     -- Special things inside a comment
     SpecialComment = { fg = colors.outer_space },
     -- Debugging statements (print, log)
@@ -175,7 +177,7 @@ return function(colors)
     -- LSP hints
     DiagnosticHint = { bg = colors.vampire_black, fg = colors.pale_cyan },
     -- LSP information
-    DiagnosticInfo = { bg = colors.vampire_black, fg = colors.light_aqua },
+    DiagnosticInfo = { bg = colors.vampire_black, fg = colors.ice_cold },
     -- LSP warning messages
     DiagnosticWarn = { bg = colors.vampire_black, fg = colors.corn, bold = true },
     -- Reference text (LSP)
@@ -187,9 +189,9 @@ return function(colors)
     -- Active function parameter in LSP hover
     LspSignatureActiveParameter = {},
     -- Informational messages
-    MoreMsg = { fg = colors.java },
+    MoreMsg = { fg = colors.celeste },
     -- Warning messages
-    WarningMsg = { fg = colors.key_lime },
+    WarningMsg = { fg = colors.corn },
 
     -- ╔═╗┬  ┬ ┬┌─┐┬┌┐┌┌─┐
     -- ╠═╝│  │ ││ ┬││││└─┐
