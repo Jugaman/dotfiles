@@ -10,9 +10,10 @@ local phantom_gloom = {
 	greenish_turquoise = "#00FF9C",
 	ruby_red = "#FF1E1E",
 	jasper = "#D84040",
+	folly = "#FF004D",
 	tulip = "#F18196",
 	dark_orange = "#FF8F00",
-	dark_salmon = "#F19A81",
+	deep_saffron = "#FB9A40",
 	maize = "#F9CB43",
 	corn = "#FAEF5D",
 	key_lime = "#E9F28E",
@@ -21,7 +22,7 @@ local phantom_gloom = {
 	wisteria = "#8967B3",
 	egyptian_blue = "#1230AE",
 	brandeis_blue = "#117AE0",
-	java = "#259797",
+	celeste = "#51EAEA",
 	light_aqua = "#94FFD8",
 	pale_cyan = "#B6FFFA",
 }
@@ -40,7 +41,7 @@ local chromatic_scheme = {
 	-- ╔═╗┌─┐┬  ┌─┐┌─┐┌┬┐┬┌─┐┌┐┌
 	-- ╚═╗├┤ │  ├┤ │   │ ││ ││││
 	-- ╚═╝└─┘┴─┘└─┘└─┘ ┴ ┴└─┘┘└┘
-	selection_bg = phantom_gloom.dark_salmon,
+	selection_bg = phantom_gloom.key_lime,
 	selection_fg = phantom_gloom.night_rider,
 
 	-- ╔═╗┌─┐┌┐┌┌─┐┌─┐
@@ -58,7 +59,7 @@ local chromatic_scheme = {
 		"#F9CB43", -- yellow (maize)
 		"#1230AE", -- blue (egyptian_blue)
 		"#8967B3", -- magenta (wisteria)
-		"#259797", -- cyan (java)
+		"#51EAEA", -- cyan (celeste)
 		"#E4E4E3", -- white (smokey_white)
 	},
 
