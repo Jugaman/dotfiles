@@ -181,49 +181,54 @@ return function(colors)
     -- LSP warning messages
     DiagnosticWarn = { bg = colors.vampire_black, fg = colors.corn, bold = true },
     -- Reference text (LSP)
-    LspReferenceText = {},
+    LspReferenceText = { bg = colors.vampire_black },
     -- Reference for read operations
-    LspReferenceRead = {},
+    LspReferenceRead = { bg = colors.vampire_black },
     -- Reference for write operations
-    LspReferenceWrite = {},
+    LspReferenceWrite = { bg = colors.vampire_black },
     -- Active function parameter in LSP hover
-    LspSignatureActiveParameter = {},
+    LspSignatureActiveParameter = { bg = colors.vampire_black },
     -- Informational messages
     MoreMsg = { fg = colors.celeste },
     -- Warning messages
-    WarningMsg = { fg = colors.corn },
+    WarningMsg = { bg = colors.vampire_black, fg = colors.corn },
 
     -- ╔═╗┬  ┬ ┬┌─┐┬┌┐┌┌─┐
     -- ╠═╝│  │ ││ ┬││││└─┐
     -- ╩  ┴─┘└─┘└─┘┴┘└┘└─┘
-    -- File explorer NeoTree
+    --  NeoTree
     NeoTreeNormal = { bg = colors.vampire_black, fg = colors.platinum },
-    -- Inactive file explorer NeoTree
     NeoTreeNormalNC = { bg = colors.vampire_black, fg = colors.platinum },
-    -- Folder names in NeoTree
     NeoTreeFolderName = { fg = colors.brandeis_blue, bold = true },
-    -- Indent markers
     NeoTreeIndentMarker = { fg = colors.outer_space },
-    -- Opened folders
     NeoTreeOpenedFolderName = { fg = colors.greenish_turquoise, bold = true },
-    -- File explorer NvimTree
+
+    --  NvimTree
     NvimTreeNormal = { bg = colors.vampire_black, fg = colors.platinum },
-    -- Inactive file explorer NvimTree
     NvimTreeNormalNC = { bg = colors.vampire_black, fg = colors.platinum },
-    -- Folder names in NeoTree
     NvimTreeFolderName = { fg = colors.brandeis_blue, bold = true },
-    -- NvimTree Indent markers
     NvimTreeIndentMarker = { fg = colors.outer_space },
-    -- NvimTree Opened Folders
     NvimTreeOpenedFolderName = { fg = colors.greenish_turquoise, bold = true },
-    -- Borders in Telescope
+
+    -- Telescope
     TelescopeBorder = { bg = colors.vampire_black, fg = colors.outer_space },
-    -- Border around preview
     TelescopePreviewBorder = { bg = colors.vampire_black, fg = colors.outer_space },
-    -- Border around prompt
     TelescopePromptBorder = { bg = colors.vampire_black, fg = colors.outer_space },
-    -- Border around results
     TelescopeResultsBorder = { bg = colors.vampire_black, fg = colors.outer_space },
+    TelescopeNormal = { bg = colors.vampire_black },
+    TelescopeNormalNC = { bg = colors.vampire_black },
+    TelescopePromptNormal = { bg = colors.vampire_black },
+    TelescopePromptTitle = { bg = colors.vampire_black, fg = colors.pastel_green },
+    TelescopePreviewTitle = { bg = colors.vampire_black, fg = colors.pastel_green },
+    TelescopeResultsTitle = { bg = colors.vampire_black, fg = colors.pastel_green },
+
+    -- WhichKey
+    WhichKey = { fg = colors.platinum },
+    WhichKeyDesc = { fg = colors.corn },
+    WhichKeyGroup = { fg = colors.tulip },
+    WhichKeyNormal = { bg = colors.vampire_black },
+    WhichKeySeparator = { fg = colors.pastel_green },
+    WhichKeyValue = { fg = colors.platinum },
 
     -- ╔═╗┬┌┬┐  ┌─┐┌┐┌┌┬┐  ╦  ╦┌─┐┬─┐┌─┐┬┌─┐┌┐┌  ╔═╗┌─┐┌┐┌┌┬┐┬─┐┌─┐┬
     -- ║ ╦│ │   ├─┤│││ ││  ╚╗╔╝├┤ ├┬┘└─┐││ ││││  ║  │ ││││ │ ├┬┘│ ││
@@ -242,5 +247,12 @@ return function(colors)
     DiffDelete = { fg = colors.ruby_red },
     -- Changed lines in diffs (highlighted text)
     DiffText = { bg = colors.pale_cyan, fg = colors.night_rider, bold = true },
+
+    DiagnosticVirtualTextError = { bg = colors.vampire_black },
+    DiagnosticVirtualTextWarn = { bg = colors.vampire_black },
+    DiagnosticVirtualTextHint = { bg = colors.vampire_black },
+    NormalFloat = { bg = colors.vampire_black, fg = colors.pastel_green }, -- Floating window background
+    FloatBorder = { bg = colors.vampire_black, fg = colors.pastel_green }, -- Border color
+    FloatTitle = { bg = colors.vampire_black, fg = colors.pastel_green },
   }
 end
